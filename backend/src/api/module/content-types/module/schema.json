@@ -1,0 +1,34 @@
+{
+    "kind": "collectionType",
+    "collectionName": "modules",
+    "info": {
+        "singularName": "module",
+        "pluralName": "modules",
+        "displayName": "Module",
+        "description": "A module inside a course"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "order": {
+            "type": "integer"
+        },
+        "course": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::course.course",
+            "inversedBy": "modules"
+        },
+        "lectures": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::lecture.lecture",
+            "mappedBy": "module"
+        }
+    }
+}

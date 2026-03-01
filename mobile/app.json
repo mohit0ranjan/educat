@@ -1,0 +1,11 @@
+{
+    "expo": {
+        "name": "edtech-mobile",
+        "slug": "edtech-mobile",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "experiments": {
+            "tsconfigPaths": true
+        }
+    }
+}

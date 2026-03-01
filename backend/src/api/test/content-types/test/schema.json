@@ -1,0 +1,28 @@
+{
+    "kind": "collectionType",
+    "collectionName": "tests",
+    "info": {
+        "singularName": "test",
+        "pluralName": "tests",
+        "displayName": "Test",
+        "description": "Educational test"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "duration": {
+            "type": "integer"
+        },
+        "questions": {
+            "type": "json"
+        }
+    }
+}

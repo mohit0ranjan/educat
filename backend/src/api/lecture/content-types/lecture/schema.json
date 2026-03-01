@@ -1,0 +1,53 @@
+{
+    "kind": "collectionType",
+    "collectionName": "lectures",
+    "info": {
+        "singularName": "lecture",
+        "pluralName": "lectures",
+        "displayName": "Lecture",
+        "description": "Lecture containing video URL and notes, linked directly to a subject/course"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "videoUrl": {
+            "type": "string",
+            "required": true
+        },
+        "notesUrl": {
+            "type": "string"
+        },
+        "duration": {
+            "type": "integer"
+        },
+        "order": {
+            "type": "integer",
+            "default": 1
+        },
+        "description": {
+            "type": "text"
+        },
+        "course": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::course.course",
+            "inversedBy": "lectures"
+        },
+        "module": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::module.module",
+            "inversedBy": "lectures"
+        },
+        "teacher": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "kind": "collectionType",
+    "collectionName": "announcements",
+    "info": {
+        "singularName": "announcement",
+        "pluralName": "announcements",
+        "displayName": "Announcement",
+        "description": "Platform announcements"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "content": {
+            "type": "richtext",
+            "required": true
+        },
+        "course": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::course.course",
+            "inversedBy": "announcements"
+        },
+        "teacher": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user"
+        }
+    }
+}

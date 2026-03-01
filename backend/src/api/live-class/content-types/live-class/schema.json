@@ -1,0 +1,38 @@
+{
+    "kind": "collectionType",
+    "collectionName": "live_classes",
+    "info": {
+        "singularName": "live-class",
+        "pluralName": "live-classes",
+        "displayName": "Live Class",
+        "description": "Scheduled live classes"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true
+        },
+        "meetingLink": {
+            "type": "string",
+            "required": true
+        },
+        "scheduledAt": {
+            "type": "datetime",
+            "required": true
+        },
+        "course": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::course.course",
+            "inversedBy": "liveClasses"
+        },
+        "teacher": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "plugin::users-permissions.user"
+        }
+    }
+}
