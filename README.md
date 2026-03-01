@@ -1,107 +1,343 @@
-# EduApp - The Smart Gateway to Better Learning 🚀
+<div align="center">
 
-EduApp is a comprehensive, modern EdTech platform built to bridge the gap between students and educators. It provides a seamless cross-platform experience with a React Native mobile app, a lightweight Next.js web portal, and a powerful Headless CMS backend powered by Strapi v5. 
+<img src="./images/banner.png" alt="EducatIN Banner" width="100%" />
 
-![Banner (Optional)]()
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- Animated App Name -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=2E7EEA&center=true&vCenter=true&width=500&lines=EducatIN" alt="EducatIN" />
+</a>
+
+<br/>
+
+<!-- Animated Tagline -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=18&pause=2500&color=6B7280&center=true&vCenter=true&width=760&lines=Bringing+Local+Coaching+Schools+to+Life+with+Technology.;Where+Every+Coaching+Centre+Gets+Its+Digital+Edge.;Empowering+Teachers.+Inspiring+Students." alt="Tagline" />
+</a>
+
+<br/><br/>
+
+<!-- Nav Links -->
+<p>
+  <a href="#-overview">Overview</a> ·
+  <a href="#-tech-stack">Tech Stack</a> ·
+  <a href="#-project-structure">Structure</a> ·
+  <a href="#-features">Features</a> ·
+  <a href="#-getting-started">Getting Started</a> ·
+  <a href="#-environment-variables">Env Variables</a> ·
+  <a href="#-contributing">Contributing</a>
+</p>
+
+<!-- Tech Badges -->
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Strapi_v5-2E7EEA?style=for-the-badge&logo=strapi&logoColor=white" alt="Strapi v5" />
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" alt="Expo" />
+</p>
+
+<!-- Status Badges -->
+<p>
+  <img src="https://img.shields.io/github/license/mohitranjan/educatin?style=flat-square&color=2E7EEA" alt="License" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs Welcome" />
+  <img src="https://img.shields.io/badge/contributions-welcome-orange?style=flat-square" alt="Contributions" />
+  <img src="https://img.shields.io/badge/platform-Web%20%7C%20iOS%20%7C%20Android-blueviolet?style=flat-square" alt="Platform" />
+</p>
+
+</div>
 
 ---
 
-## 🌟 Architecture & Tech Stack
+## 📖 Overview
 
-This platform is organized into a monorepo structure containing three core pillars:
+**EducatIN** is a full-fledged EdTech platform built to bridge the gap between local coaching schools and modern technology. Hundreds of neighbourhood coaching centres run on whiteboards and paper — **EducatIN changes that**, giving them the digital infrastructure of a top-tier institution.
 
-1. **`backend/` (Strapi v5 CMS + SQLite)**
-   - Headless CMS for dynamically managing users, courses, lectures, announcements, schedules, and quizzes.
-   - Configured with robust role-based access control (Student vs Teacher).
-   - `@strapi/provider-email-nodemailer` integrated for secure, automated "Forgot Password" workflows via SMTP.
+Built on a **decoupled (headless) architecture**, the platform cleanly separates content management from presentation — making it fast, scalable, and easy to maintain.
 
-2. **`frontend/` (Next.js 16 + React 19 + Tailwind CSS v4)**
-   - A highly optimized, responsive Web Portal meant for desktop and tablet users.
-   - Built with Next.js App Router and compiled via cutting-edge `Turbopack`.
-   - Uses `lucide-react` for beautiful, lightweight iconography and premium glassmorphic UI elements.
-   
-3. **`mobile/` (Expo + React Native + Zustand)**
-   - A native Android/iOS application focused on accessibility for students and ease of management for teachers on the go.
-   - Highly dynamic `React Navigation` (Bottom Tabs & Native Stack).
-   - Local state handled reliably via `Zustand`.
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| 🗄️ **Backend** | Strapi v5 | Headless CMS — content, REST APIs, user management |
+| 💻 **Web** | Next.js 14 | High-performance admin & teacher dashboard |
+| 📱 **Mobile** | React Native (Expo) | Cross-platform app for students & teachers |
 
 ---
 
-## 🔥 Key Features
+## 📸 Screenshots
 
-### 🎓 For Students
-* **Role-Based Authentication**: Secure JWT session management specifically tailored to student data access.
-* **Premium Dashboard**: Glassmorphic UI featuring academic progress rings, grades, and attendance tracking.
-* **Dynamic Content Delivery**: Browse subjects, consume embedded video lectures from YouTube links, and read attached PDF course materials natively within the App.
-* **Live Classes Portal**: Immediate access to live broadcast links (Zoom/Meet/etc.) triggered by backend scheduling.
-* **Notice Board**: Real-time broadcast announcements and alerts from school administrators.
 
-### 👨‍🏫 For Teachers / Instructors
-* **Teacher Portal UI**: A distinct, dedicated dashboard view emphasizing classroom management.
-* **Quick Stats Overview**: Glanceable metrics tracking total assigned students, average attendance, and active assignment counts.
-* **Class Scheduling**: Host live sessions, generate announcements, and trigger meeting links directly to student apps.
-* **Course Assignment Management**: View assigned courses, grade syllabus progress, and assign new homework.
-* **To-Do Task List**: Integrated checklist system to prioritize grading and syllabus creation.
+<summary><b>📱 Mobile App — React Native</b></summary>
+<br/>
 
-### 🛠️ Platform Agnostic Features
-* **Nodemailer SMTP Integration**: Real working 'Forgot Password' email recovery mechanism (rather than default Strapi Local Mailbox drop).
-* **Cross-Platform Sync**: Whether a student views a PDF on the Next.js Web Portal or the React Native Mobile App, state and URLs pull gracefully from the unified Strapi API.
-* **Dark / Light Mode**: Dynamic UI theming supported out of the box on mobile.
+<p align="center">
+  <img src="./images/1.png" width="22%" />
+  <img src="./images/2.png" width="22%" />
+  <img src="./images/3.png" width="22%" />
+  <img src="./images/4.png" width="22%" />
+</p>
+<p align="center">
+  <img src="./images/5.png" width="22%" />
+  <img src="./images/6.png" width="22%" />
+  <img src="./images/7.png" width="22%" />
+  <img src="./images/8.png" width="22%" />
+</p>
+<p align="center">
+  <img src="./images/9.png" width="22%" />
+  <img src="./images/10.png" width="22%" />
+  <img src="./images/11.png" width="22%" />
+</p>
+
+
+
+
+<summary><b>💻 Web Dashboard — Next.js</b></summary>
+<br/>
+
+<p align="center">
+  <img src="./images/1a.png" width="45%" />
+  <img src="./images/2a.png" width="45%" />
+</p>
+<p align="center">
+  <img src="./images/3a.png" width="45%" />
+  <img src="./images/4a.png" width="45%" />
+</p>
+<p align="center">
+  <img src="./images/5a.png" width="45%" />
+  <img src="./images/6a.png" width="45%" />
+</p>
+<p align="center">
+  <img src="./images/7a.png" width="45%" />
+  <img src="./images/8a.png" width="45%" />
+</p>
+
+
+
+---
+
+## 🛠 Tech Stack
+
+### 🗄️ Backend
+- **[Strapi v5](https://strapi.io/)** — Headless CMS with REST & GraphQL API
+- **PostgreSQL** / **SQLite** — Relational database (configurable per environment)
+- **Nodemailer** — Transactional email via SMTP
+
+### 💻 Web Frontend
+- **[Next.js 14](https://nextjs.org/)** — React framework with App Router, SSR & SSG
+- **[Tailwind CSS](https://tailwindcss.com/)** — Utility-first styling
+- **React** — Component-driven UI
+
+### 📱 Mobile
+- **[React Native](https://reactnative.dev/)** — Cross-platform iOS & Android
+- **[Expo](https://expo.dev/)** — Managed workflow, OTA updates, dev tooling
+- **[Zustand](https://zustand-demo.pmnd.rs/)** — Lightweight global state management
+
+### 🔐 Auth & Security
+- **JWT** — Stateless, token-based authentication
+- **RBAC** — Role-Based Access Control enforced at API level via Strapi filters
+
+---
+
+## 📂 Project Structure
+
+```
+EducatIN/
+├── backend/              # Strapi v5 — API, content types, plugins
+│   ├── src/
+│   │   ├── api/          # Content type controllers & routes
+│   │   └── plugins/      # Strapi plugin configurations
+│   └── .env.example
+│
+├── frontend/             # Next.js 14 — Web dashboard
+│   ├── app/              # App Router: layouts, pages, loading states
+│   ├── components/       # Reusable UI components
+│   ├── lib/              # API clients, helpers, utilities
+│   └── .env.example
+│
+├── mobile/               # React Native — Expo app
+│   ├── app/              # Expo Router: screens & navigation
+│   ├── components/       # Shared UI components
+│   ├── store/            # Zustand state stores
+│   └── .env.example
+│
+└── images/               # Screenshots & assets for README
+```
+
+---
+
+## ✨ Features
+
+### 🎓 Students
+- Browse and enroll in available courses
+- Watch video lectures and download PDF study materials
+- Join live classes via integrated session links
+- Receive real-time announcements from teachers
+
+### 👨‍🏫 Teachers
+- Role-scoped dashboard — access only assigned courses
+- Upload video lectures and manage course content
+- Schedule and broadcast live sessions
+- Post announcements directly to enrolled students
+
+### 🛡️ Admins
+- Centralized user, role, and course management via Strapi
+- Assign teachers to specific courses
+- Full content control and platform-wide oversight
 
 ---
 
 ## 🚀 Getting Started
 
-To run the full stack locally, you'll need three separate terminal windows.
+### Prerequisites
 
-### 1. Start the Backend (Strapi)
-Make sure you have inserted your SMTP credentials in `backend/.env`.
+Ensure the following are installed on your machine:
+
+- [Node.js](https://nodejs.org/) `>= 18.x`
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/) *(for mobile development)*
+
+---
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/educatin.git
+cd educatin
+```
+
+### 2. Backend — Strapi CMS
+
 ```bash
 cd backend
+cp .env.example .env
 npm install
 npm run develop
 ```
-*Strapi Admin will be available at `http://localhost:1337/admin`.*
 
-### 2. Start the Frontend (Next.js Web Portal)
+> ✅ Admin panel available at: `http://localhost:1337/admin`
+
+### 3. Frontend — Next.js Web App
+
 ```bash
-cd frontend
+cd ../frontend
+cp .env.example .env.local
 npm install
 npm run dev
 ```
-*Web Portal will be available at `http://localhost:3000`.*
 
-### 3. Start the Mobile App (Expo)
+> ✅ Web app available at: `http://localhost:3000`
+
+### 4. Mobile — Expo App
+
 ```bash
-cd mobile
+cd ../mobile
+cp .env.example .env
 npm install
-npm run start
+npx expo start
 ```
-*Scan the generated QR Code using the `Expo Go` app on your physical device, or press `a`/`i` to launch in a simulator.*
+
+> ✅ Scan the QR code with **Expo Go** on Android/iOS, or press `i` / `a` for emulator.
 
 ---
 
-## 🔒 Environment Variables Reference
-Ensure the following variables are present in your respective `.env` files.
+## 🔐 Environment Variables
 
-**Backend (`backend/.env`)**
+> ⚠️ Never commit `.env` files to version control. Add them to `.gitignore`.
+
+### `backend/.env`
+
 ```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=465
-SMTP_USERNAME=your_email@gmail.com
-SMTP_PASSWORD=your_app_password
+# Database
+DATABASE_CLIENT=sqlite            # or "postgres" for production
+DATABASE_FILENAME=.tmp/data.db    # SQLite only
+
+# Mail (SMTP)
+SMTP_HOST=smtp.example.com
+SMTP_PORT=587
+SMTP_USERNAME=your@email.com
+SMTP_PASSWORD=your_password
+
+# Security (generate strong random values)
+APP_KEYS=key1,key2
+API_TOKEN_SALT=your_salt
+ADMIN_JWT_SECRET=your_admin_secret
+JWT_SECRET=your_jwt_secret
 ```
 
-**Frontend (`frontend/.env.local`)**
+### `frontend/.env.local`
+
 ```env
-NEXT_PUBLIC_STRAPI_API_URL=http://localhost:1337/api
+NEXT_PUBLIC_STRAPI_API_URL=http://localhost:1337
 ```
 
-**Mobile (`mobile/.env`)**
+### `mobile/.env`
+
 ```env
-EXPO_PUBLIC_API_URL=http://your_local_ip:1337/api
+# Use your machine's LOCAL IP — "localhost" will not work on a physical device
+EXPO_PUBLIC_API_URL=http://192.168.x.x:1337
 ```
 
 ---
 
-*This project represents a full-stack, scalable approach to modern education technology. Open to contributions and feedback!*
+## 🛡️ Role-Based Access Control (RBAC)
+
+Data isolation is enforced at the API level. Teachers only receive data for their assigned courses via Strapi's query filters:
+
+```http
+GET /api/courses?filters[teacher][id][$eq]={{USER_ID}}&populate=*
+```
+
+Roles (`student`, `teacher`, `admin`) are managed in Strapi and validated on every authenticated request by decoding the JWT payload server-side.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the repository
+2. Create your feature branch — `git checkout -b feat/your-feature`
+3. Commit your changes — `git commit -m "feat: describe your change"`
+4. Push to your branch — `git push origin feat/your-feature`
+5. Open a Pull Request
+
+Please follow the [Conventional Commits](https://www.conventionalcommits.org/) specification for commit messages.
+
+---
+
+## 📄 License
+
+Licensed under the **MIT License** — see [LICENSE](./LICENSE) for full details.
+
+---
+
+## 👤 Author
+
+<div align="center">
+
+**Mohit Ranjan** — Full Stack Developer
+
+<p>
+  <a href="https://github.com/mohitranjan">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  &nbsp;
+  <a href="https://linkedin.com/in/mohitranjan">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=2E7EEA&height=120&section=footer" width="100%" />
+
+<sub>⭐ If EducatIN helped or inspired you, drop a star — it keeps the project alive!</sub>
+
+</div>
